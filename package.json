@@ -4,13 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next build && next export -o docs",
+    "build": "next build && next export",
     "start": "next start",
     "eslint": "./node_modules/.bin/eslint --cache --cache-location=node_modules/.cache/.eslintcache --fix",
     "stylelint": "./node_modules/.bin/stylelint --cache --cache-location=node_modules/.cache/.stylelintcache --fix",
-    "lint:js": "yarn run eslint 'src/**/*.{ts,tsx}' --ignore-path .eslintignore",
-    "lint:css": "yarn run stylelint 'src/**/*.{css,scss}' --ignore-path .stylelintignore",
+    "lint:js": "npm run eslint 'src/**/*.{ts,tsx}' --ignore-path .eslintignore",
+    "lint:css": "npm run stylelint 'src/**/*.{css,scss}' --ignore-path .stylelintignore",
     "typecheck": "./node_modules/.bin/tsc --noEmit --jsx 'react-jsxdev' --allowSyntheticDefaultImports",
     "test": "jest",
     "telemetry-status": "npx next telemetry status",
@@ -26,19 +25,18 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": "yarn run lint:js",
-    "*.{css,scss}": "yarn run lint:css",
-    "*.{ts,tsx}": "yarn run typecheck",
+    "*.{js,ts,tsx}": "npm run lint:js",
+    "*.{css,scss}": "npm run lint:css",
+    "*.{ts,tsx}": "npm run typecheck",
     "*.{js,ts,tsx,css,md}": "prettier --write"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
-    "@tailwindcss/jit": "^0.1.15",
     "dotenv": "^8.2.0",
     "next": "^10.0.9",
     "next-pwa": "^5.0.5",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-redux": "^7.2.2"
   },
   "devDependencies": {
