@@ -8,15 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v2.3.4
         with:
           persist-credentials: false
 
-      - name: Install and Build
+      - name: Install Packages with Yarn
         uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.3.0
+      - name: Build and Export
+        uses: borales/actions-yarn@v2.3.0
         with:
           cmd: export # will run `yarn export` command
         env:
