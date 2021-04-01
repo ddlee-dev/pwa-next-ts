@@ -27,8 +27,8 @@
   "lint-staged": {
     "*.{js,ts,tsx}": "yarn run lint:js",
     "*.{css,scss}": "yarn run lint:css",
-    "*.{js,ts,tsx,css,md}": "prettier --write",
-    "*.{ts,tsx}": "yarn run typecheck"
+    "*.{ts,tsx}": "yarn run typecheck",
+    "*.{js,ts,tsx,css,md}": "prettier --write"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
