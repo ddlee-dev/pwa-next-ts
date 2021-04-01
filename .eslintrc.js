@@ -7,14 +7,16 @@ module.exports = {
     project: './tsconfig.json'
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'import', 'jsx-a11y'],
+  plugins: ['@typescript-eslint', 'import', 'jsx-a11y', 'testing-library'],
   extends: [
     'eslint:recommended',
     'plugin:cypress/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'plugin:import/typescript'
+    'plugin:import/typescript',
+    'plugin:jest-dom/recommended',
+    'plugin:testing-library/react',
+    'prettier'
   ],
   rules: {
     '@typescript-eslint/ban-ts-comment': 'off',

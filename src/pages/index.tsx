@@ -1,5 +1,7 @@
+import { Button } from '../client/components/Button/Button';
+
 const Home = () => {
-  return <div>Hello World</div>;
+  return <Button label="Hello World" />;
 };
 
 export default Home;
