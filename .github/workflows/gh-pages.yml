@@ -42,9 +42,6 @@ jobs:
       - name: Lint (CSS)
         run: yarn lint:css
 
-      - name: Typecheck
-        run: yarn typecheck
-
       - name: Tests (Jest)
         run: yarn test
       
