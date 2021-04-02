@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
+    "build": "next build && next export -o docs",
     "start": "next start",
     "eslint": "./node_modules/.bin/eslint --cache --cache-location=node_modules/.cache/.eslintcache --fix",
     "stylelint": "./node_modules/.bin/stylelint --cache --cache-location=node_modules/.cache/.stylelintcache --fix",
@@ -13,12 +12,11 @@
     "lint:css": "npm run stylelint 'src/**/*.{css,scss}' --ignore-path .stylelintignore",
     "typecheck": "./node_modules/.bin/tsc --noEmit --jsx 'react-jsxdev' --allowSyntheticDefaultImports",
     "test": "jest",
-    "telemetry-status": "npx next telemetry status",
-    "telemetry-enable": "npx next telemetry enable",
-    "telemetry-disable": "npx next telemetry disable",
     "cypress:open": "cypress open",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "telemetry-disable": "npx next telemetry disable",
+    "copy:env": "cp .env.example .env.development && cp .env.example .env.production"
   },
   "husky": {
     "hooks": {
