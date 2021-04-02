@@ -1,9 +1,10 @@
 const withPWA = require('next-pwa');
 const ghPages = process.env.DEPLOY_TARGET === 'gh-pages';
-const assetPrefix = ghPages ? '/pwa-next-ts/' : '';
+const ghPrefix = ghPages ? '/pwa-next-ts/' : '';
 
 module.exports = withPWA({
-  assetPrefix: assetPrefix,
+  basePath: ghPrefix,
+  assetPrefix: ghPrefix,
   pwa: {
     dest: 'public',
     disable: process.env.NODE_ENV === 'development',
