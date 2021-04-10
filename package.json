@@ -77,7 +77,7 @@
     "sass": "^1.32.8",
     "sass-loader": "10.1.1",
     "stylelint": "^13.8.0",
-    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-recommended": "^4.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "ts-jest": "^26.5.4",
     "ts-node": "^9.1.1",
